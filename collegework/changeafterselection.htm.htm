@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #dc8d8d;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .main {
+            display: flex;
+            grid-template-columns: auto 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .main div {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .main div a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .main div img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #555;
+        }
+        .first :iframe{
+            width: 100px;
+            height: 500px;
+            border:none !important;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- //CSS ko use kiya hai and naa target kro each of the class by the . operator and jo daalna hai daal lo --> -->
+    <h1>College Information</h1>
+    <div class="main">
+        <div class="first">
+            <h2>About MGIMT</h2>
+            <p>
+                A college being established with a purpose to renovate the face of the future engineers and making it happen from past 10 years.
+                <iframe src="https://mgimt.edu.in/" frameborder="0" height="100px" allowfullscreen="true"></iframe>
+            </p>
+        </div>
+        <div class="second">
+            <h2>Academic Programs</h2>
+            <p>
+                Explore our academic programs:
+            </p>
+            <ul>
+                <li><a href="https://mgimt.ac.in/poly" target="iframe"><P>Polytechinic Program</P></a></li>
+                <li><a href="https://mgimt.ac.in/btech" target="iframe">B.Tech Program</a></li><br>
+                <li><a href="https://mgimt.ac.in/miss" target="iframe">Miscellaneous Program</a></li>
+            </ul>
+        </div>
+        <div class="third">
+            <img src="1.jpg" alt="Campus Image">
+            <p>Our Campus</p>
+            <p>Bhool krke bhi ye drone type picture ko real mt maan naa ..bss ek hi hai thodi acchi</p>
+        </div>
+        <div class="fourth">
+            <img src="5.jpg" alt="Student Life Image">
+            <p>Student Life at MGIMT</p>
+            <p> Making the knowledge practical..ji bilkul nhi bss 2 min ke liye baithaya hai photo click krke utha diya..
+                
+            </p>
+        </div>
+    </div>
+<!-- upar waaal is all the definition of the columns jo dikh rhe hai ..
+now unpar click krke to open a new tab a need to create the set of function jo na click krne prr dikhaayi de -->
+    
+<!-- From down se using the set of js code to allow the clicking and happening of the events..so just see the basics from the js site and know about them ..the brief is that just jo id define hai usme se select kr lo aur click kro .. -->
+    <script>
+        function openIframe(url) {
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframe = iframeContainer.querySelector('iframe');
+            iframe.src = url;
+            iframeContainer.style.display = 'flex';
+        }
+
+        function closeIframe() {
+            var iframeContainer = document.getElementById('iframeContainer');
+            var iframe = iframeContainer.querySelector('iframe');
+            iframe.src = '';
+            iframeContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

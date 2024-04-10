@@ -1,0 +1,44 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Taj Mahal</title>
+    <style>
+        img{
+            width: 100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">
+        <img src="Taj_Mahal_(Edited).jpeg" alt="Taj Mahal" width="300" height="200">
+    </a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taj Mahal</title>
+    <style>
+        #wikiFrame {
+            display: none;
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="tajMahalLink">
+        <img src="Taj_Mahal_(Edited).jpeg" alt="Taj Mahal" width="300" height="200" onclick="showWiki()">
+    </a>
+    <iframe id="wikiFrame" src="https://en.wikipedia.org/wiki/Taj_Mahal"></iframe>
+
+    <script>
+        function showWiki() {
+            var wikiFrame = document.getElementById('wikiFrame');
+            wikiFrame.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

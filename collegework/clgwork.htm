@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        .placeholder {
+            padding: 20px;
+            text-align: center;
+        }
+        .checkboxes {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+        }
+        .equipment-list {
+            list-style-type: none;
+            padding: 20px;
+        }
+        .equipment-list li {
+            margin-bottom: 5px;
+        }
+        .image {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<frameset rows="50%,*" frameborder="0">
+    <frameset cols="33%,30%,37%" frameborder="0">
+        <frame src="placeholder.html" name="frame1">
+        <frame src="checkboxes.html" name="frame2">
+        <frame src="equipment.html" name="frame3">
+    </frameset>
+    <hr>
+    <frameset cols="50%,50%" frameborder="0">
+        <frame src="Screenshot 2024-03-18 220549.png" name="frame4">
+        <frame src="Taj_Mahal_(Edited).jpeg" name="frame5">
+    </frameset>
+</frameset>
+<noframes>
+    <body>
+        <div class="placeholder">
+            <h2>Placeholder Content</h2>
+            <p>This is a placeholder for the first column.</p>
+        </div>
+        <div class="checkboxes">
+            <h2>Checkboxes</h2>
+            <label><input type="checkbox" name="color" value="red"> Red</label><br>
+            <label><input type="checkbox" name="color" value="blue"> Blue</label><br>
+            <label><input type="checkbox" name="color" value="green"> Green</label><br>
+        </div>
+        <div class="equipment-list">
+            <h2>Equipment List</h2>
+            <ul>
+                <li>Equipment 1</li>
+                <li>Equipment 2</li>
+                <li>Equipment 3</li>
+                <li>Equipment 4</li>
+                <li>Equipment 5</li>
+            </ul>
+        </div>
+        <div>
+            <img class="image" src="jpg" alt="Image 1">
+        </div>
+        <div>
+            <img class="image" src="jpg" alt="Image 2">
+        </div>
+    </body>
+</noframes>
+</html>
